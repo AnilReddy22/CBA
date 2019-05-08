@@ -1,37 +1,26 @@
-#include<stdio.h>
-#include<conio.h>
-void main()
+#include <stdio.h>
+int main()
 {
-    int a,b,c,d,e,f;
-   
-    printf("Enter Two Values :");
-    scanf("%d%d",&a,&b);
-    sum(a,b);
-    mult(a,b);
-    div(a,b);
+    int i, space, rows, k=0;
+
+    printf("Enter number of rows: ");
+   rows=5;
+
+    for(i=1; i<=rows; ++i, k=0)
+    {
+        for(space=1; space<=rows-i; ++space)
+        {
+            printf("  ");
+        }
+
+        while(k != 2*i-1)
+        {
+            printf("* ");
+            ++k;
+        }
+
+        printf("\n");
+    }
     
-    getch();
+    return 0;
 }
-    sum(int x,int y)
-      {
-            int z;
-            z=x+y;
-            printf("Addtion : %d\n",z);
-            return 0;
-      }
-    mult(int x,int y)
-     {
-            int z;
-            z=x*y;
-            printf("Multiply : %d\n",z);
-            return 0;
-      }
-     div(int x,int y)
-     {
-            int z;
-            z=x/y;
-            printf("Div : %d\n",z);
-            return 0;
-      }
-
-
